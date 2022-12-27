@@ -326,6 +326,9 @@ button:hover{
         margin: auto;
         margin-top:5px;
     }
+    .MP img{
+        margin-top:90%;
+    }
 
 }
 .lower{

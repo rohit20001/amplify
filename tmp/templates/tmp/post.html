@@ -2,6 +2,24 @@
 {% block head%}{%load static%}
     <link rel="stylesheet" href="{% static 'tmp/blog.css' %}">
     <link rel="stylesheet" href="{% static 'tmp/style.css' %}">
+    <style>
+        p{
+            font-size: 14px;
+        }
+        .imgcourse{
+        width: 80%;
+        height: 80%;
+        margin-top:1rem;
+        margin-bottom:3rem
+    }
+    @media only screen and (max-width: 650px){
+        .author .imgcourse{
+        width: 40%;
+        height: 70%;
+        
+    }
+}
+    </style>
 {%endblock%}
 {% block title %} Blog | {{ post.title }} {%endblock%}
 {% block body %}
@@ -11,15 +29,16 @@
         <div class="sameRow1"><span class="titlesize"> {{ post.title }}<hr class="hrcssright"></span>
             <div class="upperpara"><p>{{ post.content_upper_para|safe }}</p>
                 {%load static%}
-                        <img src='/media/{{post.blogImage}}' alt="Motivational picture" width="90%" height="420rem" class="centerimage" style="margin-top:3rem;margin-bottom:3rem">
+                        <img src='/media/{{post.blogImage}}' alt="Motivational picture" width="100%" height="100%" class="centerimage" style="margin-top:3rem;margin-bottom:3rem">
                 <p>{{ post.content_lower_para|safe }}</p>
             </div>
             <div class="mt3">
-                Share on these platforms
+                <p>Share on these platforms
                 <i class="fab fa-facebook-f" ></i>
                 <i class="fab fa-instagram" ></i>
                 <i class="fab fa-twitter" ></i>
                  <span class="floatright">Like</span>
+                </p>
             </div>
             <div class="boxHead author"><b>About the Author</b></div>
             <hr class="hrcssright">
@@ -27,7 +46,7 @@
                 <div class="flex">
                     <div class="width30 sameRow1">
                         {%load static%}
-                        <img src='/media/{{post.authorImage}}' alt="Motivational picture" width="90%" height="190rem" >
+                        <img class="imgcourse" src='/media/{{post.authorImage}}' alt="Motivational picture">
                     </div>
                     <div class="width70 sameRow2"><h2 class="m4">{{post.postedBy}}</h2><p class="m4">{{post.aboutAuthor|safe}}</p></div>
                 </div>
@@ -87,19 +106,7 @@
                 <span class="floatright"><a href="#"> View all</a></span>
             </div>
 
-            <div class="boxHead"><b>Stories</b><button class="tbtn" id="tbtn3"><i class="fas fa-sort-down"></i></button></div>
-            <hr class="hrcssright">
-            <div class="m4 containerk hidden" id="hide3">
-                <!-- use loop here -->
-                <div class="flex">
-                    <div class="width45 sameRow1">
-                        {%load static%}
-                        <img src="{% static 'tmp/Run__001.png' %}" alt="Motivational picture" width="90%" height="100rem" >
-                    </div>
-                    <div class="width55 sameRow2"><p class="m4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, quae?</p></div>
-                </div>
-                <span class="floatright"><a href="#"> View all</a></span>
-            </div>
+            
 
         </div>
     </div>

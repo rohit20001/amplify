@@ -197,12 +197,17 @@ margin-top:-1rem;
     }
 
     .marginbot{
-        height: 8rem;
+        height: auto;
         /* margin-bottom: 20%; */
     }
-    /* .box3{
-        height: 30rem;
-    } */
+    .wrappImages .imgcourse{
+        width: 90%;
+        height: 70%;
+        
+    }
+    .box3{
+        margin-bottom: 150%;
+    }
 
     
 }
@@ -257,20 +262,24 @@ margin-top:-1rem;
 
     .box3 {
         width: 100%;
-        height: 8rem;
+        height: auto;
         margin-top: 20px;
-        margin-bottom: 8%;
+        
         background-color: white;
+        margin-left: -5%;
         /* margin-left: -5%; */
     }
-
+    .goalsimage{
+    width: 100%;
+    height: 100%;
+}
     .box31 {
         width: 150px;
         height: 150px;
         padding: 2px;
-        margin-left: 6%;
+        margin-left: 8%;
         background-color: white;
-        margin-top: 20px;
+        margin-top: 30px;
         float: left;
 
     }
@@ -304,6 +313,12 @@ margin-top:-1rem;
     .marq{
         border: 0px solid;
     }
+    .imgcourse{
+        width: 80%;
+        height: 80%;
+        margin-top:1rem;
+        margin-bottom:3rem
+    }
 </style>
 {%endblock%}
 {% block title %} Blog | {{ post.course_name }} {%endblock%}
@@ -316,7 +331,7 @@ margin-top:-1rem;
                 <u><b>Fees:&nbsp; </b>{{ post.fees }}</u>
                 
                 {%load static%}<div class="wrappImages"><div class="imagesub">
-                        <img src='/media/{{post.course_image}}' alt="Motivational picture" width="80%" height="360rem"  style="margin-top:3rem;margin-bottom:3rem">
+                        <img class="imgcourse" src='/media/{{post.course_image}}' alt="Motivational picture" >
                     </div>
                     <div class="imageupi">
                         <b>Fees:&nbsp; </b>{{ post.fees }} Rs/Month
@@ -363,9 +378,9 @@ margin-top:-1rem;
                 <div class="flex">
                     <div class="width30 sameRow1">
                         {%load static%}
-                        <img src='/media/{{post.course_teacher_image}}' alt="Motivational picture" width="60%" height="190rem" >
+                        <img class="imgcourse" src='/media/{{post.course_teacher_image}}' alt="Motivational picture">
                     </div>
-                    <div class="width70 sameRow2"><h2 class="m4">{{post.course_teacher}}</h2><p class="m4">{{post.aboutTeacher|safe}}</p></div>
+                    <div class="width70 sameRow2"><h3 class="m4">{{post.course_teacher}}</h3><p class="m4">{{post.aboutTeacher|safe}}</p></div>
                 </div>
             </div>
             
@@ -373,19 +388,19 @@ margin-top:-1rem;
         </div>
         <div style="margin-top: 30px; text-align: center;text-size-adjust: 30px;"><h4>Benefits of these courses</h4></div>
 <div class="box3 marginbot">
-    <div class="box31"><img src="{% static 'tmp/media/certified.png'%}" width="150px" height="150px">
+    <div class="box31"><img class="goalsimage"  src="{% static 'tmp/media/certified.png'%}">
         <p align="center">Certified</p>
     </div>
-    <div class="box31"><img src="{% static 'tmp/media/joker.png'%}" width="150px" height="150px">
+    <div class="box31"><img class="goalsimage" src="{% static 'tmp/media/joker.png'%}" >
         <p align="center">Recorded Videos of Live Class</p>
     </div>
-    <div class="box31"><img src="{% static 'tmp/media/doubt.png'%}" width="150px" height="150px">
+    <div class="box31"><img class="goalsimage" src="{% static 'tmp/media/doubt.png'%}" >
         <p align="center">Solve Doubts</p>
     </div>
-    <div class="box31"><img src="{% static 'tmp/media/skills.png'%}" width="150px" height="150px">
+    <div class="box31"><img class="goalsimage" src="{% static 'tmp/media/skills.png'%}" >
         <p align="center">Gain Skills</p>
     </div>
-    <div class="box31"><img src="{% static 'tmp/media/cheaps.png'%}" width="150px" height="150px">
+    <div class="box31"><img class="goalsimage" src="{% static 'tmp/media/cheaps.png'%}" >
         <p align="center">Cheap and Best</p>
     </div>
 </div>

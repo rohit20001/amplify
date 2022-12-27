@@ -17,8 +17,8 @@
         <hr>
         <form method="post" >
             {% csrf_token %}
-            <input type="email" name="username" id="ee" placeholder="Email">
-            <input type="password" name="password" id="pp" placeholder="Password"><br>
+            <input type="email" name="username" id="ee" placeholder="Email" required>
+            <input type="password" name="password" id="pp" placeholder="Password" required><br>
             <input type="submit" name="log" id="ll" value="Log In">
         </form>
         <hr>

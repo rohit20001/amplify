@@ -7,7 +7,7 @@
     {%load static%}
     
     <script src="{%static 'tmp/jquery.js'%}"></script>{%load static%}
-    
+    <link rel="stylesheet" href="{% static 'tmp/forms.css' %}">
     <style>
 .divshow {
   width: 50%;
@@ -19,7 +19,7 @@
 .divshowl {
   width: 75%;
   height: 35%;
-  background: #cf5a2b;
+  background: #e2eedd;
   opacity: .9;
   float: right;
 }
@@ -27,7 +27,7 @@
   background-color: red;
   overflow: hidden;
   width: 100%;
-  height: 400px;
+  height: auto;
 }
 
 #inner {
@@ -50,16 +50,33 @@
 }
 .child3 {
   float: left;
-  background: #cf5a2b;
+  background: #e2eedd;
   width: 75%;
   height: 100%;
 }
 .child4 {
   float: left;
-  background-color: #cf5a2b;
+  background-color: #e2eedd;
   width: 25%;
   height: 100%;
 }
+
+.imgqwe{
+  height: 100%;
+  width: 60%;
+  border-radius: 50%;
+}
+
+.aboutText{
+  font-size: 16px;
+}
+@media only screen and (max-width:650px) {
+  
+#inner{
+  height: 100%;
+  font-size: 10px;
+}
+  }
 
 </style>
 
@@ -72,50 +89,75 @@
 
 <center><h1>Codution Team</h1></center>
 <hr>
-<div id="container">
+<div style="background-color: #517ab8;" id="container">
   <div id="inner">
-        {% load static%}<div class="child2" ><img src="{% static 'tmp/media/kps.jpeg' %}" height="100%" width="90%"></div>
-      <div class="child"><br><h2>Kulvir Pratap Singh</h2><h4>Computer Science and Engineering Incoming SDE @Hexaware </h4>
-          <br><h5>Experienced Campus Manager with a demonstrated history of working in the e-learning industry. Skilled in Python (Programming Language), Style Sheets, Cascading, Core Java, and Cascading Style Sheets (CSS). Strong education professional with a Bachelor of Technology - BTech focused in computer Science and engineering from BUNDELKHAND INSTITUTE OF ENGINEERING AND TECHNOLOGY, JHANSI.</h5>
+        {% load static%}<div class="child2" ><img class="imgqwe" src="{% static 'tmp/media/c_final.jpeg' %}" ></div>
+      <div class="child"><br><h5>Abhishek Gautam</h5><h6>Chief Operating Officer </h6>
+          <p class="aboutText">Hello everyone my name is abhishek gautam and i am pursuing D.pharm. mostly When people consider a career in pharmacy, they may think of their local community pharmacist dispensing medications and providing healthcare advice. While community pharmacy is a common and rewarding career pathway, it isn’t the only option for pharmacists!
+            Various career options in pharmacy so if you learn about it you will get more opportunity you also get chance to work in the foreign countries .... so if you want to learn come to @codution
+          </p>
       </div>
   </div>
 </div>
 <hr>
-<div id="container">
+<div style="background-color: #e2eedd;" id="container">
   <div id="inner">
-        <div class="child3"><br><h2>Prashant Chandel</h2><h4>Computer Science and Engineering ( B.Tech 2nd Year ) </h4>
+        <div class="child3"><br><h5>Rohit Verma</h5><h6>Chief Technology Officer </h6>
           <br>
-        <h5>Working on frontend to create a sophiticated views for user. Skilled in Python (Programming Language), Style Sheets,HTML5,Javascript and Cascading Style Sheets (CSS). Student of  computer Science and engineering from BUNDELKHAND INSTITUTE OF ENGINEERING AND TECHNOLOGY, JHANSI.</h5></div>
-        {% load static%}<div class="child4" ><img src="{% static 'tmp/photos/p.jpeg' %}" height="100%" width="90%" style="float:right"></div>
+          <p class="aboutText">Hi, I am Rohit Verma. I graduated with B.Tech in computer science from BIET Jhansi. I am a front-end developer and also an android developer. I have worked on many computer science tools and technologies and also have industry working experience and had worked on many real-time projects.I will give my level best to provide education or will share my knowledge and skills from my overall learning career to each enthusiast.</p></div>
+        {% load static%}<div class="child4" ><img class="imgqwe" src="{% static 'tmp/media/r_final.jpeg'%}"  style="float:right"></div>
 
   </div>
 </div>
 <hr>
-<div id="container">
+<div style="background-color: #517ab8;" id="container">
   <div id="inner">
-        {% load static%}<div class="child2" ><img src="{% static 'tmp/photos/r.jpeg' %}" height="100%" width="90%"></div>
-      <div class="child"><br><h2>Rohit Verma</h2><h4>Computer Science and Engineering ( B.Tech 2nd Year ) </h4>
-          <br></div>
+        {% load static%}<div class="child2" ><img class="imgqwe" src="{% static 'tmp/media/dishu.jpeg'%}" ></div>
+      <div class="child"><br><h5>Divyanshi Gupta</h5><h6>Chief Marketing & Legal Officer </h6>
+          <p class="aboutText">
+            Hi I am Divyanshi Gupta. I graduated with B.tech in Chemical Engineering from Banasthali Vidhyapith. I have worked on many tools and technologies and have working experience in Digital marketing and Human resource Management.I am an upcoming Associate Analyst. Using my analytical skills I can help in understanding how the collected data can affect business decisions that prepare reports with details finding and recommend solution.
+          </p>
+        </div>
       </div>
   </div>
 </div>
 <hr>
-<div id="container">
+<div style="background-color: #e2eedd;" id="container">
   <div id="inner">
-      <div class="child3"><br><h2>Vipin </h2><h4>Computer Science and Engineering ( B.Tech 2nd Year ) </h4></div>
-        {% load static%}<div class="child4" ><img src="{% static 'tmp/photos/v.jpeg' %}" height="100%" width="90%" style="float:right"></div>
+      <div class="child3"><br><h5>Geetesh Singh </h5><h6>Regional & Functional Manager </h6><br>
+        <p class="aboutText">
+          Hello friends, My name is Mr. GEETESH PRATAP SINGH (English Grammarian).I have been teaching English since last 6 years. I'm basically from Uttar-Pradesh but currently staying in Firozabad.I did my graduation in B.Sc, B.Ed from  Dr. B.R. Ambedkar University That's all about me.
+        </p></div>
+        {% load static%}<div class="child4" ><img class="imgqwe" src="{% static 'tmp/media/g_final.jpeg'%}"  style="float:right"></div>
 
   </div>
 </div>
 <hr>
-<div id="container">
+<div style="background-color: #517ab8;" id="container">
   <div id="inner">
-        {% load static%}<div class="child2" ><img src="{% static 'tmp/photos/a.jpeg' %}" height="100%" width="90%"></div>
-      <div class="child"><br><h2>Ayush Saini</h2><h4>Computer Science and Engineering ( B.Tech 2nd Year ) </h4>
+        {% load static%}<div class="child2" ><img class="imgqwe" src="{% static 'tmp/media/aak_final.jpeg'%}" ></div>
+      <div class="child"><br><h5>Aakrshan Kushwah</h5><h6>Departmental & General Manager</h6>
           <br>
+          <p class="aboutText">
+            My name is akarshn kushwaha diploma in pharmacy 2nd year I live in Kotla District Firozabad I am 18 year old I am interested in pharmacy I am self motivated, dedicated,
+forcused person my short term goal is to provide a job to needy ones.
+
+          </p>
       </div>
   </div>
 </div>
 <hr>
+<div style="background-color: rgba(150, 190, 216, 0.432);" id="container">
+  <div id="inner">
+      
+        <p class="aboutText">
+          <b>Follow Instagram:</b> @codution<br>
+          <b>Email:</b> codution.org@gmail.com<br>
+          <b>WhatsApp</b> +91904511610
+        </p></div>
+        
+
+  </div>
+</div>
 
 {% endblock %}

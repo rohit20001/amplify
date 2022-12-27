@@ -26,11 +26,11 @@
                     <h2>Book now Free Classes</h2>
                     <form method="post">
                         {% csrf_token %}
-                        Name:&nbsp;&nbsp;&nbsp; <input type="text" name="name" id="na" placeholder="Name"><br>
-                        Email:&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" id="semail" placeholder="email id"><br>
-                        Subject: <input type="text" name="sub" id="sub" placeholder="Subject"><br>
-                        Contact: <input type="tel" name="contact" id="scon" placeholder="contact no."><br>
-                        DOB:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="date" name="dob" id="sdob" placeholder="DOB"><br>
+                        Name:&nbsp;&nbsp;&nbsp; <input type="text" name="name" id="na" placeholder="Name" required><br>
+                        Email:&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" id="semail" placeholder="email id" required><br>
+                        Subject: <input type="text" name="sub" id="sub" placeholder="Subject" required><br>
+                        Contact: <input type="tel" name="contact" id="scon" placeholder="contact no." required><br>
+                        DOB:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="date" name="dob" id="sdob" placeholder="DOB" required><br>
                         <!-- {% csrf_token %} -->
                         <input type="submit" name="signup" id="ssp" value="Submit">
                     </form>

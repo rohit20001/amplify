@@ -42,7 +42,7 @@
 
 <body>
     <div class="nav">
-        <div class="logo"><img src="{% static 'tmp/media/Logo.png'%}" alt="logo here" height="90%"></div>
+        <a  href="{% url 'page1' %}"><div class="logo"><img src="{% static 'tmp/media/Logo.png'%}" alt="logo here" height="90%"></a></div>
 
         <a  href="{% url 'page1' %}"><button class="btn">Home</button></a>
         <a href="{% url 'courses' %}"><button class="btn">Courses</button></a>
@@ -116,19 +116,17 @@
         </div>
         <div class="llf">
         <div class="lf">
-            <form action="#">
-                <label for="uid">Subscribe for NewsLetter</label><br>
-                <input type="mail" name="uid" id="uid" placeholder="Enter Your Email Id">&nbsp;
-                <input type="button" name="uid1" id="uid1" value="Submit" style="background-color:#DDBEA8">
 
-            </form>
-        </div>
+            
+
+
+ </div>
         <div style="margin-right:6rem" class="lows">
             Follow us on
-            <i class="fab fa-facebook-f"></i>
+            <a href="https://www.facebook.com/profile.php?id=100088964052807"><i class="fab fa-facebook-f"></i></a>
             <a href="https://instagram.com/codution?igshid=NDk5N2NlZjQ="><i class="fab fa-instagram"></i></a>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-linkedin"></i>
+            <a href="https://twitter.com/codution_edu"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/codution-edu/"><i class="fab fa-linkedin"></i></a>
         </div>
     </div>
     </div>

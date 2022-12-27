@@ -13,6 +13,7 @@ from django.core.mail import send_mail
 # Create your views here.
 # user =NULL
 # @csrf_exempt
+
 def page1(request):
     if request.method == 'POST':
         name = request.POST['name']
@@ -121,8 +122,8 @@ def blog(request):
         print(name,idd,comment)
 
         send_mail(
-            "Comment From Blog By:- " + name,
-            comment,
+            idd,
+            "Mail From Blogs "+ name + comment,
             idd,
             ['codution.org@gmail.com'],
             fail_silently = False,
@@ -149,6 +150,21 @@ def post(request, post_id=None):
 
 
 def projects(request):
+    if request.method == 'POST':
+        name = request.POST['uid1']
+        idd = request.POST['uid2']
+        comment = request.POST['uid3']
+        print(name,idd,comment)
+
+        send_mail(
+            idd,
+            "Mail From Projects "+name + comment,
+            idd,
+            ['codution.org@gmail.com'],
+            fail_silently = False,
+
+        )
+        return redirect('/')
     projec = Project.objects.all().order_by('-posted_date_project')
     paginator = Paginator(projec, 1)
 
