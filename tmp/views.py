@@ -1,6 +1,6 @@
 from django.shortcuts import render,get_object_or_404,redirect,HttpResponse
 from django.core.paginator import Paginator
-from tmp.models import Post,Project,New_Student,Course,Paid_Student,Story
+from tmp.models import Post,Project,New_Student,Course,Paid_Student,Story,Certi
 from django.contrib.auth.models import User,auth
 from django.contrib.auth import logout, login, authenticate
 from django.contrib import messages
@@ -246,5 +246,14 @@ def success(request):
     else:
         return redirect('/')
 
-def confirm(request):
-    return render(request,"tmp/confirm.html")
+def verify(request):
+    if request.method == 'POST':
+        first_name = request.POST['first_name']
+        cert =Certi.objects.filter(certi_id = first_name)
+        if cert.exists():
+            
+            messages.success(request, "This Certificate is verified to "+cert[0].cert_name)
+        else:
+            messages.error(request, "This Id doesn't exist")
+        
+    return render(request,"tmp/verify.html")

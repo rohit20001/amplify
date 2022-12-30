@@ -1,0 +1,63 @@
+
+
+{%extends 'tmp/base.html' %}
+{% block head%}
+{% load static %}
+<link rel="stylesheet" href="{% static 'tmp/forms.css' %}">
+<style>
+    .flexbox{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2%;
+        width: 100%;
+    }
+    .setimage{
+        width: 100%;
+        height: 100%;
+    }
+    .purchase{
+        width: 100%;
+        height: auto;
+        margin-left: 5px;
+    }
+    .briefcourse{
+        width: 50%;
+        margin-left: 4%;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .bb11{
+        width: 20%;
+        /* height: 40%; */
+    }
+    .headcc{
+        margin-top: 2%;
+        font-size: 40px;
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}
+{% block title %} Sign Up {% endblock %}
+{% block body %}
+{% for message in messages %}
+      <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>{{message}}</strong>
+  </div>
+      {% endfor %}
+ <div class="kingform queen">
+    <div class="box_1">
+       <p> Verify your Certificates Here !!</p>
+        <hr>
+        <form method="post" class="form1">
+            {% csrf_token %}
+           Certificate_ID<input type="text" name="first_name" id="f" placeholder="Certificate_ID" class="sinput" required><br>
+            <input type="submit" name="signup" id="sp" value="Verify" class="sinputbtn sinput">
+
+        </form>
+        <hr>
+
+    </div>
+    </div>
+    <div class="filler joker">Any Query<br><b>Contact Us:</b> codution.org@gmail.com</div>
+{% endblock %}
